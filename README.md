@@ -1,11 +1,10 @@
 # Overview
 
-This document shows an example of setting up SSO for AWS console access with an admin 
-role, using Stanford production IdP service as identify provider.  
-You need to have a workgroup that contains users who will use the SSO to
-access AWS console to manage resources.
+This document shows an example of how to set up SSO for AWS console access with an 
+IAM role, using Stanford production IdP service as identify provider.  
 
-# Identify provider and IAM role setup
+You need to have a workgroup that contains users who will use the SSO and the access
+role to gain access to your account's AWS console.
 
 ## Identify provider setup
 
@@ -37,7 +36,7 @@ Login to your AWS console.
    Give the role a permission, e.g. Administrator, Power admin user, etc. It depends on your use case.
 1. Click "Create Role" to finish
 
-#  Configure relying party trust between  IdP and AWS
+##  Configure relying party trust between  IdP and AWS
 
 Amazon currently only works with IdP-initiated SSO - our Unsolicited SSO Endpoints 
 are not listed in our IdP metadata, but the handlers and decoders appear to be 
@@ -58,7 +57,7 @@ setup with the following information.
     Role-name: admin-sso
     Workgroup: itservices:idg-aws
 
-#  Create a virtual host to access the AWS console
+##  Create a virtual host to access the AWS console
 
 For example, create a virtual host name "my-account-aws-console.stanford.edu"
 and redirect it to:
