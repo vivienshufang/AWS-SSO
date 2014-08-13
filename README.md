@@ -13,7 +13,6 @@ Login to your AWS console.
 1. Select IAM service
 1. Click 'Identity Providers' 
 1. Click 'Create SAMLE Provider'
-
     Choose a name that is easy to identify which provider provides SSO, e.g. stanford-idp. 
 1. Upload idP-only SAML metadata document from:
 
@@ -32,9 +31,7 @@ Login to your AWS console.
    the bottom.
 1. Select __Grant Web Single Sign-On (WebSSO) access to SAML providers__
 1. Set permissions
-
    Give the role a permission, e.g. Administrator, Power admin user, etc. It depends on your use case.  
-
 1. Click "Create Role" to finish
 
 ##  Configure relying party trust between  IdP and AWS
@@ -43,8 +40,8 @@ Amazon currently only works with IdP-initiated SSO - our Unsolicited SSO Endpoin
 are not listed in our IdP metadata, but the handlers and decoders appear to be 
 enabled.  AWS only uses the metadata for the certificate / entity ID.
 
-You need to submit the request to shibboleth-team@lists.stanford.edu to complete the
-setup with the following information.
+You need to submit the request to HelpSU to complete the setup with the following 
+information.
 
 * The [AWS metadata](https://signin.aws.amazon.com/static/saml-metadata.xml)
 
@@ -53,10 +50,10 @@ setup with the following information.
   Replace values with values you created in the SSO setup steps. You can find the information
   from AWS console under IAM->Roles, IAM->Identify Provider sections. 
   
-    Account number: 123456789012
-    Provider name: arn:aws:iam::972569769453:saml-provider/stanford-idp
-    Role-name: admin-sso
-    Workgroup: itservices:idg-aws
+        Account number: 123456789012
+        Provider name: arn:aws:iam::972569769453:saml-provider/stanford-idp
+        Role-name: admin-sso
+        Workgroup: itservices:idg-aws
 
 ##  Create a virtual host to access the AWS console
 
