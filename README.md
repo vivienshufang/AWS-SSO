@@ -12,7 +12,7 @@ Login to your AWS console.
 
 1. Select IAM service
 1. Click 'Identity Providers' 
-1. Click 'Create Provider'
+1. Click 'Create SAMLE Provider'
 
     Choose a name that is easy to identify which provider provides SSO, e.g. stanford-idp. 
 1. Upload idP-only SAML metadata document from:
@@ -33,7 +33,8 @@ Login to your AWS console.
 1. Select __Grant Web Single Sign-On (WebSSO) access to SAML providers__
 1. Set permissions
 
-   Give the role a permission, e.g. Administrator, Power admin user, etc. It depends on your use case.
+   Give the role a permission, e.g. Administrator, Power admin user, etc. It depends on your use case.  
+
 1. Click "Create Role" to finish
 
 ##  Configure relying party trust between  IdP and AWS
