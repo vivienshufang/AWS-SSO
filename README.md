@@ -12,7 +12,7 @@ Login to your AWS console.
 
 1. Select IAM service
 1. Click 'Identity Providers' 
-1. Click 'Create SAMLE Provider'
+1. Click 'Create SAML Provider'
     Choose a name that is easy to identify which provider provides SSO, e.g. stanford-idp. 
 1. Upload idP-only SAML metadata document from:
 
@@ -26,7 +26,7 @@ Login to your AWS console.
    to create an IAM role, or you you can go back to IAM service, select 
    "Roles->Create New Role".
 
-1. Create role name: e.g. admin-sso
+1. Create role name: e.g. admin-saml
 1. Select __Role for Identity Provider Access__ in the role type selection screen near
    the bottom.
 1. Select __Grant Web Single Sign-On (WebSSO) access to SAML providers__
@@ -51,8 +51,8 @@ information.
   from AWS console under IAM->Roles, IAM->Identify Provider sections. 
   
         Account number: 123456789012
-        Provider name: arn:aws:iam::972569769453:saml-provider/stanford-idp
-        Role-name: admin-sso
+        Provider name: arn:aws:iam::123456789012:saml-provider/stanford-idp
+        Role-name: admin-saml
         Workgroup: itservices:idg-aws
 
 ##  Create a virtual host to access the AWS console
